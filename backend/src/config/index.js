@@ -1,9 +1,14 @@
-const mysql = require("mysql2");
-const connection = mysql.createConnection({
+const mysql2 = require("mysql2");
+console.log("La base données est connectée !");
+
+const db = mysql2.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "blog_posts",
+  database: "vote",
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
 });
 
-module.exports = connection;
+module.exports = db;
