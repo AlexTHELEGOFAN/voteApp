@@ -29,9 +29,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="title">Système de vote</h1>
-      <textarea className="question">
-        Allez-vous voter pour Donald Trump ?
-      </textarea>
+      <textarea className="question">Allez vous votez pour ... ?</textarea>
       <div className="button-container">
         <YesButton fetchVotes={fetchVotes} />
         <NoButton fetchVotes={fetchVotes} />
